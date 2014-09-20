@@ -1,7 +1,16 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.ArrayController.extend({
   setup: function(){
-    console.log(this);
-  }.on('init')
+
+  }.on('init'),
+  actions: {
+    createTodo: function(){
+      var item = Ember.Object.create({
+        title: this.get('newTitle')
+      });
+    this.get('model').addObject(item);
+    this.set('newTitle', '');
+    }
+  }
 });
