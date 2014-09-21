@@ -36,6 +36,10 @@ export default Ember.ArrayController.extend({
       });
     this.get('model').addObject(item);
     this.set('newTitle', '');
+    },
+    deleteTodo: function(item){
+      this.get('model').removeObject(item);
     }
   }
+
 });

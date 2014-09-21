@@ -22,7 +22,7 @@
     <h4 class="task-header">Incomplete Tasks</h4>
       <ol id="incomplete-tasks-list">
       {{#each incompletedTasks}}
-        <li>{{title}} {{input type="checkbox" checked=isCompleted}}</li>
+        <li>{{title}} {{input type="checkbox" checked=isCompleted}} <a {{ action 'deleteTodo' this}} class="button">Delete</a></li>
       {{/each}}
       </ol>
 
