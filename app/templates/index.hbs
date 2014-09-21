@@ -21,8 +21,8 @@
   <div class="small-6 columns">
     <h4 class="task-header">Incomplete Tasks</h4>
       <ol id="incomplete-tasks-list">
-      {{#each}}
-        <li>{{title}}</li>
+      {{#each incompletedTasks}}
+        <li>{{title}} {{input type="checkbox" checked=isCompleted}}</li>
       {{/each}}
       </ol>
 
@@ -30,5 +30,8 @@
   <div class="small-6 columns">
     <h4 class="task-header">Completed Tasks</h4>
       <ol id="completed-tasks-list">
+      {{#each completedTasks}}
+        <li>{{title}}</li>
+      {{/each}}
       </ol>
   </div>
