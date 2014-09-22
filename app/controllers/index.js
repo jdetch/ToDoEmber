@@ -39,7 +39,10 @@ export default Ember.ArrayController.extend({
     },
     deleteTodo: function(item){
       this.get('model').removeObject(item);
+    },
+    deleteAllTodos: function(){
+      var items = this.get('completedTasks');
+      this.get('model').removeObjects(items);
+      }
     }
-  }
-
 });
